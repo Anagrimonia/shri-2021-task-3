@@ -58,11 +58,16 @@ body {
 }
 
 .button {
+    display: block;
     width: 32px;
     height: 32px;
+    padding: 0;
     margin-bottom: 8px;
     cursor: pointer;
     user-select: none;
+    border: none;
+    background: none;
+    outline: none;
 }
 
 .prev {
