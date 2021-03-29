@@ -25,14 +25,19 @@ function receiveMessage({ data }: MessageEvent<XMessage>) {
 }
 
 function onDocumentClick(e: MouseEvent) {
+    console.log(e.target);
+
     if (e.target instanceof HTMLElement) {
+
         let target = e.target;
         while(target && !target.dataset.action) {
             target = target.parentElement;
         }
 
+        if (target) {
             const { action, params } = target.dataset;
-            sendMessage(messageAction(action, params));
+            sendMessage(messageAction(action, params));   
+        }
     }
 }
 
