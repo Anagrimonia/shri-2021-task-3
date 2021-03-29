@@ -38,10 +38,11 @@ body {
 }
 
 .slide-progress-value {
-    height: 4;
+    height: 4px;
     background-color: #F4B000;
     transition: transform 0.1s linear;
     transform-origin: left top;
+    transform: scaleX(0);
 }
 
 .frame {
@@ -58,21 +59,20 @@ body {
 }
 
 .button {
+    display: block;
     width: 32px;
     height: 32px;
+    padding: 0;
     margin-bottom: 8px;
     cursor: pointer;
     user-select: none;
+    border: none;
+    background: none;
+    outline: none;
 }
 
 .prev {
     transform: rotate(180deg);
-}
-
-@media (max-height: 750px) { 
-    .prev {
-        display: none;
-    }
 }
 
 .theme_light .button {
@@ -84,7 +84,7 @@ body {
 }
 
 .theme_light .slide-progress {
-    background: #bfbfbf88;
+    background: #BFBFBF;
 }
 
 .theme_light .set-light {
